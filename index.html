@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- BARRA LATERAL (IZQUIERDA) -->
+    <aside class="sidebar">
+      <div class="brand-title">
+        <i class="fa-solid fa-cookie-bite"></i>
+        <span>Donitas</span>
+      </div>
+      
+      <nav class="menu-nav">
+        <h3>Menú</h3>
+        <ul>
+          <li><button class="nav-btn active" data-category="todas"><i class="fa-solid fa-border-all"></i> Todas</button></li>
+          <li><button class="nav-btn" data-category="clasicas"><i class="fa-solid fa-star"></i> Clásicas</button></li>
+          <li><button class="nav-btn" data-category="especiales"><i class="fa-solid fa-crown"></i> Especiales</button></li>
+          <li><button class="nav-btn" data-category="bebidas"><i class="fa-solid fa-mug-hot"></i> Bebidas</button></li>
+        </ul>
+      </nav>
+
+      <div class="cart-summary-box">
+        <h3><i class="fa-solid fa-cart-shopping"></i> Tu Pedido</h3>
+        <p id="cart-count">0 productos seleccionados</p>
+        <p class="cart-total">Total: Q<span id="cart-total-price">0.00</span></p>
+        <button id="view-cart-btn" class="btn-primary">Ver Carrito</button>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL (DERECHA) -->
+    <main class="main-content">
+      <!-- ÁREA DEL LOGOTIPO -->
+      <header class="logo-container">
+        <!-- Reemplaza 'logo.png' por la ruta de tu imagen de logotipo -->
+        <img src="img/logotipo.png">
+      </header>
+
+      <!-- OPCIONES (CATÁLOGO VERTICAL) -->
+      <section class="options-container">
+        <h2 class="section-title">Nuestras Opcíones</h2>
+        <div id="products-list" class="products-list">
+          <!-- Las tarjetas de donas se generarán dinámicamente con JavaScript -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- MODAL DE DETALLES DEL PRODUCTO -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-product-modal">&times;</span>
+      <div class="modal-body">
+        <img id="modal-img" src="" alt="Producto">
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <p id="modal-category" class="badge"></p>
+          <p id="modal-description"></p>
+          <p class="modal-price">Precio: Q<span id="modal-price"></span></p>
+          <button id="modal-add-btn" class="btn-primary"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DEL CARRITO -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content cart-modal-content">
+      <span class="close-btn" id="close-cart-modal">&times;</span>
+      <h2><i class="fa-solid fa-cart-shopping"></i> Tu Carrito de Compras</h2>
+      <div id="cart-items-container" class="cart-items">
+        <!-- Elementos del carrito agregados con JS -->
+      </div>
+      <div class="cart-footer">
+        <h3>Total: Q<span id="cart-modal-total">0.00</span></h3>
+        <button id="whatsapp-btn" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Enviar Pedido por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
