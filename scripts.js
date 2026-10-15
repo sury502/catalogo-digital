@@ -47,7 +47,7 @@ const productos = [
   {
     id: 6,
     nombre: "Donas con azúcar",
-    categoria: "bebidas",
+    categoria: "clasicas",
     precio: 5.00,
     descripcion: "dona simple glaseada con azucar.",
     imagen: "img/donas con azucar.jpg"
